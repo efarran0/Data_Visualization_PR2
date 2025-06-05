@@ -1,16 +1,15 @@
 # Instalar y cargar paquetes
-options(repos = c(CRAN = "https://cloud.r-project.org"))
+options(repos = c(RSPM = "https://packagemanager.posit.co/cran/latest"))
 
-packages <- c("readr", "mapSpain", "shiny", "dplyr", "plotly", "leaflet", "htmltools", "shinythemes", "shinyWidgets", "shinyjs")
-invisible(lapply(packages, function(pkg) {
-  if (!require(pkg, character.only = TRUE)) install.packages(pkg)
-  library(pkg, character.only = TRUE)
-}))
+packages <- c("readr", "mapSpain", "shiny", "dplyr", "plotly", "leaflet", "htmltools", "shinythemes", "shinyWidgets", "shinyjs", "sf")
+installed <- packages %in% rownames(installed.packages())
+if (any(!installed)) install.packages(packages[!installed])
+lapply(packages, library, character.only = TRUE)
 
 options(error=NULL)
 
 # Cargar los datos
-data <- read_csv("data/hábitos_alimentarios_España.csv", 
+data <- read_csv("data/hábitos_alimenticios_España.csv", 
                  col_types = cols(...1 = col_skip()))
 
 data <- data %>%
@@ -34,7 +33,7 @@ ui <- fluidPage(
   useShinyjs(),
   theme = shinytheme("flatly"),
   titlePanel(
-    tags$h1("Hábitos alimentarios en España", 
+    tags$h1("Hábitos alimenticios en España", 
             style = "font-weight: bold; color: #2C3E50; font-size: 30px; font-family: 'Helvetica'; text-align: center; margin-top: 20px; margin-bottom: 30px")
   ),
   
@@ -61,7 +60,7 @@ ui <- fluidPage(
     )
   )
 
-server <- function(input, output) {
+server <- function(input, output) {  
   output$spain <- renderLeaflet({
     
     ccaa_vol <- data %>%
@@ -92,7 +91,7 @@ server <- function(input, output) {
 
               ) %>% lapply(HTML),
             labelOptions = labelOptions(
-              noHIde = FALSE,
+              noHide = FALSE,
               textOnly = FALSE,
               style = list(
                 "color" = "black",
