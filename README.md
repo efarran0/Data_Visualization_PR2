@@ -15,7 +15,7 @@ Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatur
 
 ## Característiques
 
-- **Tecnologia**: R (readr, sf, shiny, shinywidgets, shinyjs, shinythemes, htmltools, mapSpain, leaflet, plotly, dplyr)
+- **Tecnologia**: R (readr, sf, shiny, shinywidgets, shinyjs, shinythemes, htmltools, mapspain, leaflet, plotly, dplyr)
 - **Interactivitat**:
   - Filtratge per any i comunitat autònoma
   - Tooltips informatius
