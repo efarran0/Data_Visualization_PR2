@@ -1,5 +1,5 @@
 ---
-title: "habitos_alimentarios_preprocesamiento"
+title: "habitos_alimenticios_preprocesamiento"
 author: "Eric Farran Moreno"
 date: "`r Sys.Date()`"
 output: pdf_document
@@ -148,6 +148,5 @@ xlsx <- c("2014.xlsx",
           "2023.xlsx")
 get_data(xlsx,
          file_compact,
-         "data/hábitos_alimentarios_España.csv")
+         "data/hábitos_alimenticios_España.csv")
 ```
-
