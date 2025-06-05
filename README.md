@@ -3,7 +3,7 @@
 **Màster en Ciència de dades**
 *Universitat Oberta de Catalunya*
 
-Aquest repositori conté una aplicació interactiva desenvolupada en Shiny que explora el consum de cada comunitat autònoma d'Espanya desagregat pels 5 nivells nutricionals mitjançant la visualització de la composició anual i la variació mensual en un format de dashboard interactiu.<br>
+Aquest repositori es basa en una aplicació interactiva desenvolupada en Shiny que explora el consum de cada comunitat autònoma d'Espanya. El volum total es desagrega pels 5 nivells nutricionals per facilitar la visualització de la composició anual i la variació mensual en un format de dashboard interactiu.<br>
 Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatura de Visualització de Dades del Màster de Ciència de Dades de la Universitat Oberta de Catalunya (UOC).
 
 ## Continguts
