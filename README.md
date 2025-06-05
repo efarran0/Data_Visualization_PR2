@@ -3,7 +3,7 @@
 **Màster Universitari en Ciència de Dades**
 *Universitat Oberta de Catalunya*
 
-Aquest repositori es basa en una aplicació interactiva desenvolupada en Shiny que explora el consum de cada comunitat autònoma d'Espanya. El volum total es desagrega pels 5 nivells nutricionals per facilitar la visualització de la composició anual i la variació mensual en un format de dashboard interactiu.<br>
+Aquest repositori es basa en una aplicació interactiva desenvolupada en Shiny que explora el consum de cada comunitat autònoma d'Espanya. El volum total es desagrega en cinc nivells nutricionals per facilitar la visualització de la composició anual i la variació mensual en un format de dashboard interactiu.<br>
 Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatura de Visualització de Dades del Màster de Ciència de Dades de la Universitat Oberta de Catalunya (UOC).
 
 ## Continguts
@@ -39,10 +39,10 @@ En cap cas les visualitzacions han estat generades de manera autònoma ni tampoc
 Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia de citació de IA](https://openaccess.uoc.edu/bitstream/10609/148823/1/U2_17_GuiaCitarIA_CAT.pdf)), garantint transparència i integritat en el procés.**
 
 ## Execució
-La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la cal executar l'app en local aplicant els seguents pasos:
+La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la cal executar l'app en local aplicant els següents pasos:
 1. Prepara les llibreries requerides
    <br>source("requirements.R")
-3. Clona el repositori
+2. Clona el repositori
    <br>git clone https://github.com/usuari/nom-repo.git
 3. Executa el runApp en R
    shiny::runApp("ruta/a/la/carpeta")
