@@ -3,7 +3,7 @@
 **Màster en Ciència de dades**
 *Universitat Oberta de Catalunya*
 
-Aquest repositori conté una aplicació interactiva desenvolupada en Shiny que explora el consum de cada comunitat autònoma d'Espanya desagregat pels 5 nivells nutricionals mitjançant la visualització de la composició anual com la variació mensual.<br>
+Aquest repositori conté una aplicació interactiva desenvolupada en Shiny que explora el consum de cada comunitat autònoma d'Espanya desagregat pels 5 nivells nutricionals mitjançant la visualització de la composició anual i la variació mensual en un format de dashboard interactiu.<br>
 Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatura de Visualització de Dades del Màster de Ciència de Dades de la Universitat Oberta de Catalunya (UOC).
 
 ## Continguts
@@ -15,7 +15,7 @@ Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatur
 
 ## Característiques
 
-- **Tecnologia**: R (Shiny, ggplot2, plotly, dplyr, ggstats, shinythemes)
+- **Tecnologia**: R (shiny, shinywidgets, shinyjs ,htmltools, mapSpain, leaflet, plotly, dplyr, shinythemes)
 - **Interactivitat**:
   - Filtratge per any i comunitat autònoma
   - Tooltips informatius
@@ -23,7 +23,9 @@ Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatur
   - Data original: [Ministerio de agricultura, pesca y alimentación (años 2014-2023, base censo INE 2011)](https://www.mapa.gob.es/es/alimentacion/temas/consumo-tendencias/panel-de-consumo-alimentario/series-anuales/default.aspx)
   - Data preprocessada: data.csv
   - Script de preprocessament: hábitos_alimentarios_preprocesamiento.Rmd
+- Extracció de dades des de múltiples fitxer xlsx amb múltiples fulles
   - Aplicació: app.R
+
 - **Compatibilitat**: Compatible amb navegadors moderns (Chrome, Firefox, Edge) que suportin aplicacions Shiny
 
 ## Ús d'intel·ligències artificials generatives (IAGs)
