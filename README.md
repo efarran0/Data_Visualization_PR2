@@ -20,7 +20,7 @@ Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatur
   - Filtratge per any i comunitat autònoma
   - Tooltips informatius
 - **Documents**:
-  - Data original: [Ministerio de agricultura, pesca y alimentación (base censo INE 2011)](https://www.mapa.gob.es/es/alimentacion/temas/consumo-tendencias/panel-de-consumo-alimentario/series-anuales/default.aspx)
+  - Data original: [Ministerio de agricultura, pesca y alimentación (años 2014-2023, base censo INE 2011)](https://www.mapa.gob.es/es/alimentacion/temas/consumo-tendencias/panel-de-consumo-alimentario/series-anuales/default.aspx)
   - Data preprocessada: data.csv
   - Script de preprocessament: hábitos_alimentarios_preprocesamiento.Rmd
   - Aplicació: app.R
