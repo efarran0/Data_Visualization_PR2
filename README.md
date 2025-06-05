@@ -23,7 +23,7 @@ Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatur
   - Data original: [Ministerio de agricultura, pesca y alimentación (años 2014-2023, base censo INE 2011)](https://www.mapa.gob.es/es/alimentacion/temas/consumo-tendencias/panel-de-consumo-alimentario/series-anuales/default.aspx)
   - Data preprocessada: data.csv
   - Script de preprocessament: hábitos_alimentarios_preprocesamiento.Rmd
-    <br>Extracció de dades des de múltiples fitxer xlsx amb múltiples fulles
+    <br>Extracció de dades d'interès des de múltiples fitxers xlsx amb múltiples fulles.
   - Aplicació: app.R
 
 - **Compatibilitat**: Compatible amb navegadors moderns (Chrome, Firefox, Edge) que suportin aplicacions Shiny
