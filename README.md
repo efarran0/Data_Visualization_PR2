@@ -1,4 +1,4 @@
-# Visualització de Dades - PR2: [hábitos alimentarios en España](https://e26vc3-eric-farran.shinyapps.io/pr2/)
+# Visualització de Dades - PRA2: [hábitos alimentarios en España](https://e26vc3-eric-farran.shinyapps.io/PRA2/)
 
 **Màster en Ciència de dades**
 *Universitat Oberta de Catalunya*
@@ -37,7 +37,7 @@ En cap cas les visualitzacions han estat generades de manera autònoma ni tampoc
 Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia de citació de IA](https://openaccess.uoc.edu/bitstream/10609/148823/1/U2_17_GuiaCitarIA_CAT.pdf)), garantint transparència i integritat en el procés.**
 
 ## Execució
-La narrativa visual és intuïtiva i interactiva. No es requereix cap instal·lació addicional i per ser consultada només cal accedir a l'[aplicació web](https://e26vc3-eric-farran.shinyapps.io/pr2/).
+La narrativa visual és intuïtiva i interactiva. No es requereix cap instal·lació addicional i per ser consultada només cal accedir a l'[aplicació web](https://e26vc3-eric-farran.shinyapps.io/PRA2/).
 
 ## Llicència
 
