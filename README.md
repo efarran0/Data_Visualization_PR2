@@ -1,4 +1,4 @@
-# Visualització de Dades - PRA2: [hábitos alimentarios en España](https://e26vc3-eric-farran.shinyapps.io/PRA2/)
+# Visualització de Dades - PRA2: hábitos alimentarios en España
 
 **Màster en Ciència de dades**
 *Universitat Oberta de Catalunya*
@@ -15,7 +15,7 @@ Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatur
 
 ## Característiques
 
-- **Tecnologia**: R (shiny, shinywidgets, shinyjs ,htmltools, mapSpain, leaflet, plotly, dplyr, shinythemes)
+- **Tecnologia**: R (readr, sf, shiny, shinywidgets, shinyjs, shinythemes, htmltools, mapSpain, leaflet, plotly, dplyr)
 - **Interactivitat**:
   - Filtratge per any i comunitat autònoma
   - Tooltips informatius
@@ -39,7 +39,13 @@ En cap cas les visualitzacions han estat generades de manera autònoma ni tampoc
 Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia de citació de IA](https://openaccess.uoc.edu/bitstream/10609/148823/1/U2_17_GuiaCitarIA_CAT.pdf)), garantint transparència i integritat en el procés.**
 
 ## Execució
-La narrativa visual és intuïtiva i interactiva. No es requereix cap instal·lació addicional i per ser consultada només cal accedir a l'[aplicació web](https://e26vc3-eric-farran.shinyapps.io/PRA2/).
+La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la cal executar l'app en local aplicant els seguents pasos:
+1. Prepara les llibreries requerides
+   <br>Especificades al començament de App.R
+3. Clona el repositori
+   <br>git clone https://github.com/usuari/nom-repo.git
+3. Executa el runApp en R
+   shiny::runApp("ruta/a/la/carpeta")
 
 ## Llicència
 
