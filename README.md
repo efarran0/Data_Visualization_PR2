@@ -1,6 +1,6 @@
 # Visualització de Dades - PRA2: hábitos alimentarios en España
 
-**Màster en Ciència de dades**
+**Màster Universitari en Ciència de Dades**
 *Universitat Oberta de Catalunya*
 
 Aquest repositori es basa en una aplicació interactiva desenvolupada en Shiny que explora el consum de cada comunitat autònoma d'Espanya. El volum total es desagrega pels 5 nivells nutricionals per facilitar la visualització de la composició anual i la variació mensual en un format de dashboard interactiu.<br>
@@ -41,7 +41,7 @@ Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia
 ## Execució
 La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la cal executar l'app en local aplicant els seguents pasos:
 1. Prepara les llibreries requerides
-   <br>Especificades al començament de App.R
+   <br>source("requirements.R")
 3. Clona el repositori
    <br>git clone https://github.com/usuari/nom-repo.git
 3. Executa el runApp en R
