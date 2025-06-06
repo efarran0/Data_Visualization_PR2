@@ -1,12 +1,11 @@
 # Instalar y cargar paquetes
-options(repos = c(RSPM = "https://packagemanager.posit.co/cran/latest"))
+options(repos = c(RSPM = "https://packagemanager.posit.co/cran/latest"),
+        error=NULL)
 
 packages <- c("readr", "mapSpain", "shiny", "dplyr", "plotly", "leaflet", "htmltools", "shinythemes", "shinyWidgets", "shinyjs", "sf")
 installed <- packages %in% rownames(installed.packages())
 if (any(!installed)) install.packages(packages[!installed])
 lapply(packages, library, character.only = TRUE)
-
-options(error=NULL)
 
 # Cargar los datos
 data <- read_csv("data/hábitos_alimenticios_España.csv", 
