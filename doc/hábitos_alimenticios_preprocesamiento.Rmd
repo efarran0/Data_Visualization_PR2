@@ -1,5 +1,5 @@
 ---
-title: "habitos_alimenticios_preprocesamiento"
+title: "hábitos_alimenticios_preprocesamiento"
 author: "Eric Farran Moreno"
 date: "`r Sys.Date()`"
 output: pdf_document
