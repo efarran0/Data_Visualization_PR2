@@ -49,4 +49,4 @@ La visualització no està disponible en línia **degut a la gran quantitat de p
 
 ## Llicència
 
-Aquest treball està sota llicència [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+Aquest treball està sota llicència [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html).
