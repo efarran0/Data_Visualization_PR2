@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE,
 ```
 
 ```{r}
-# Librerias
+# Librerías
 if (!require(readxl)) install.packages("readxl"); library(readxl)
 if (!require(dplyr)) install.packages("dplyr"); library(dplyr)
 if (!require(tidyr)) install.packages("tidyr"); library(tidyr)
@@ -135,7 +135,7 @@ get_data <- function(xlsx, f, final_path) {
 ```
 
 ```{r echo=FALSE, message=FALSE}
-# Se citan los archivos excel i se ejecuta file_compact
+# Se citan los archivos excel y se ejecuta get_data
 xlsx <- c("2014.xlsx",
           "2015.xlsx",
           "2016.xlsx",
