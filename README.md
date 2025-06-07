@@ -40,7 +40,8 @@ Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia
 
 ## Execució
 La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la cal executar l'app en local aplicant els següents pasos:
-0. Obre Rstudio i situtat a la consola
+
+0. Obre Rstudio i situat a la consola
 1. Prepara les llibreries requerides
    <br>source("requirements.R")
 2. Clona el repositori
