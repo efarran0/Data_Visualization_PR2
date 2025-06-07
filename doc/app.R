@@ -8,7 +8,7 @@ if (any(!installed)) install.packages(packages[!installed])
 lapply(packages, library, character.only = TRUE)
 
 # Cargar los datos
-data <- read_csv("data/hábitos_alimenticios_España.csv", 
+data <- read_csv("../data/hábitos_alimenticios_España.csv", 
                  col_types = cols(...1 = col_skip()))
 
 data <- data %>%
