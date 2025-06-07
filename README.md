@@ -41,15 +41,15 @@ Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia
 ## Execució
 La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la cal executar l'app en local aplicant els següents pasos:
 
-1. Obre Rstudio i situat a la consol
-2. Clona el repositori
+1. **Obre Rstudio i situat a la consola**
+2. **Clona el repositori GitHub**
    <br>"https://github.com/efarran0/Data_Visualization_PRA2/archive/main.zip" %>% 
    <br>download.file(destfile = "repo.zip") %T>% 
    <br>{unzip("repo.zip")} %>% 
    <br>invisible() 
-4. Prepara les llibreries requerides
+4. **Prepara les llibreries requerides**
    <br>source("Data_Visualization_PRA2-main/requirements.R")
-5. Executa el runApp en R
+5. **Executa el runApp en R**
    shiny::runApp("Data_Visualization_PRA2-main/doc")
 
 ## Llicència
