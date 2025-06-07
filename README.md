@@ -50,7 +50,7 @@ La visualització no està disponible en línia **degut a la gran quantitat de p
 4. **Prepara les llibreries requerides**
    <br>source("Data_Visualization_PRA2-main/requirements.R")
 5. **Executa el runApp en R**
-   shiny::runApp("Data_Visualization_PRA2-main/doc")
+   <br>shiny::runApp("Data_Visualization_PRA2-main/doc")
 
 ## Llicència
 
