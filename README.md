@@ -39,7 +39,7 @@ En cap cas les visualitzacions han estat generades de manera autònoma ni tampoc
 Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia de citació de IA](https://openaccess.uoc.edu/bitstream/10609/148823/1/U2_17_GuiaCitarIA_CAT.pdf)), garantint transparència i integritat en el procés.**
 
 ## Execució
-La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la cal executar l'app en local aplicant els següents pasos:
+La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la es pot visualitzar els documents de la carpeta sreenshots o bé executar l'app en local aplicant els següents pasos:
 
 1. **Obre Rstudio i situat a la consola**
 2. **Clona el repositori GitHub**
