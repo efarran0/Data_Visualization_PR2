@@ -43,10 +43,11 @@ La visualització no està disponible en línia **degut a la gran quantitat de p
 
 1. **Obre Rstudio i situat a la consola**
 2. **Clona el repositori GitHub**
-   <br>"https://github.com/efarran0/Data_Visualization_PRA2/archive/main.zip" %>% 
-   <br>download.file(destfile = "repo.zip") %T>% 
-   <br>{unzip("repo.zip")} %>% 
-   <br>invisible() 
+   <br>url <- "https://github.com/efarran0/Data_Visualization_PRA2/archive/main.zip"
+   <br>download.file(url, destfile = "repo.zip")
+   <br>unzip("repo.zip")
+   <br>invisible()
+
 4. **Prepara les llibreries requerides**
    <br>source("Data_Visualization_PRA2-main/requirements.R")
 5. **Executa el runApp en R**
