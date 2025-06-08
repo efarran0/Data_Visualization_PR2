@@ -46,7 +46,6 @@ La visualització no està disponible en línia **degut a la gran quantitat de p
    <br>url <- "https://github.com/efarran0/Data_Visualization_PRA2/archive/main.zip"
    <br>download.file(url, destfile = "repo.zip")
    <br>unzip("repo.zip")
-   <br>invisible()
 
 4. **Prepara les llibreries requerides**
    <br>source("Data_Visualization_PRA2-main/requirements.R")
