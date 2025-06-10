@@ -1,10 +1,23 @@
 [phases.setup]
-nixPkgs = ["R", "gcc", "zlib.dev", "libgit2", "openssl.dev"]
+nixPkgs = [
+  "R",
+  "gcc",
+  "gfortran",
+  "zlib.dev",
+  "libgit2",
+  "openssl.dev",
+  "gdal",     # per sf i mapSpain
+  "proj",     # per sf i mapSpain
+  "geos",     # per sf
+  "curl",     # algunes dependències com mapSpain o leaflet
+  "pkg-config",  # per compilar paquets amb dependències natives
+  "libxml2.dev"  # pot ser necessari per shiny o htmltools
+]
 
 [phases.install]
+# Instal·lem tots els paquets d'R que fas servir
 commands = [
-  "R -e 'install.packages(c(\"shiny\", \"remotes\"), repos=\"https://packagemanager.posit.co/cran/latest\")'",
-  "R -e 'remotes::install_deps(dependencies=TRUE)'"
+  "R -e 'install.packages(c(\"readr\", \"mapSpain\", \"shiny\", \"dplyr\", \"plotly\", \"leaflet\", \"htmltools\", \"shinythemes\", \"shinyWidgets\", \"shinyjs\", \"sf\"), repos=\"https://packagemanager.posit.co/cran/latest\")'"
 ]
 
 [phases.build]
