@@ -1,22 +1,14 @@
 # Instalar y cargar paquetes
-options(repos = c(RSPM = "https://packagemanager.posit.co/cran/latest"),
-        error=NULL)
-
-packages <- c("readr", "mapSpain", "shiny", "dplyr", "plotly", "leaflet", "htmltools", "shinythemes", "shinyWidgets", "shinyjs", "sf")
-installed <- packages %in% rownames(installed.packages())
-if (any(!installed)) install.packages(packages[!installed])
-lapply(packages, library, character.only = TRUE)
+library(shiny)
+library(dplyr)
+library(plotly)
+library(leaflet)
+library(shinyWidgets)
+library(sf)
 
 # Cargar los datos
-data <- read_csv("../data/hábitos_alimenticios_España.csv", 
-                 col_types = cols(...1 = col_skip()))
-
-data <- data %>%
-  mutate(across(where(is.character), as.factor),
-         across(nivel, as.factor))
-
-ccaa <- esp_get_ccaa(resolution = "1") %>% 
-  st_transform(4326)
+data <- readRDS("data/data.rds")
+ccaa <- readRDS("data/ccaa.rds")
 
 # Paleta de colores
 nivel_colores <- c(
@@ -29,8 +21,6 @@ nivel_colores <- c(
 
 # Definir la UI
 ui <- fluidPage(
-  useShinyjs(),
-  theme = shinytheme("flatly"),
   titlePanel(
     tags$h1("Hábitos alimenticios en España", 
             style = "font-weight: bold; color: #2C3E50; font-size: 30px; font-family: 'Helvetica'; text-align: center; margin-top: 20px; margin-bottom: 30px")
@@ -55,68 +45,72 @@ ui <- fluidPage(
            leafletOutput("spain", height = "45vh"),
            verbatimTextOutput("ccaa_seleccionada"),
            plotlyOutput("stack", height = "35vh")
-           )
     )
   )
+)
 
-server <- function(input, output) {  
-  output$spain <- renderLeaflet({
+server <- function(input, output) {
+  ccaa_dades <- reactive({
+    req(input$año)
     
     ccaa_vol <- data %>%
       filter(año == input$año) %>%
       group_by(ccaa) %>%
-      summarise(vol = sum(volumen, na.rm = TRUE))
+      summarise(vol = sum(volumen, na.rm = TRUE), .groups = "drop")
     
-    ccaa_dades <- left_join(ccaa, ccaa_vol, by = c("iso2.ccaa.name.es" = "ccaa"))
+    left_join(ccaa, ccaa_vol, by = c("iso2.ccaa.name.es" = "ccaa"))
+  })
+  
+  output$spain <- renderLeaflet({
     
     pal <- colorNumeric("Reds", domain = c(0, 6e+6), na.color = "transparent")
     
-    leaflet(ccaa_dades) %>%
+    leaflet(ccaa_dades()) %>%
       addProviderTiles(
         "CartoDB.PositronNoLabels",
         options = providerTileOptions(
           noWrap = TRUE,
           minZoom = 5
+        )
+      ) %>%
+      addPolygons(
+        layerId = ~iso2.ccaa.name.es,
+        label = ~paste0(
+          "<strong>", gsub(",.*", "",iso2.ccaa.name.es), "</strong><br>",
+          "Consumo total (", input$año, "): ",
+          format(round(vol, 1),
+                 big.mark = ".",
+                 decimal.mark = ",", sep ="")
+          
+        ) %>% lapply(HTML),
+        labelOptions = labelOptions(
+          noHide = FALSE,
+          textOnly = FALSE,
+          style = list(
+            "color" = "black",
+            "padding" = "5px 10px",
+            "background-color" = "rgba(255,255,255,0.8)",
+            "border-radius" = "3px"
           )
-        ) %>%
-          addPolygons(
-            layerId = ~iso2.ccaa.name.es,
-            label = ~paste0(
-              "<strong>", gsub(",.*", "",iso2.ccaa.name.es), "</strong><br>",
-              "Consumo total (", input$año, "): ",
-              format(round(vol, 1),
-                     big.mark = ".",
-                     decimal.mark = ",", sep ="")
-
-              ) %>% lapply(HTML),
-            labelOptions = labelOptions(
-              noHide = FALSE,
-              textOnly = FALSE,
-              style = list(
-                "color" = "black",
-                "padding" = "5px 10px",
-                "background-color" = "rgba(255,255,255,0.8)",
-                "border-radius" = "3px"
-              )
-            ),
-            fillColor = ~pal(vol),
-            weight = 1,
-            color = "black",
-            fillOpacity = 0.7,
-            highlightOptions = highlightOptions(
-              color = "red",
-              weight = 2,
-              bringToFront = TRUE
-            )) %>%
-          addLegend(
-            pal = pal,
-            values = seq(0, 6e+6, length.out = 5),
-            title = paste("Consumo total", input$año),
-            position = "topright"
-          )  %>%
-          fitBounds(lng1 = -10, lat1 = 27, lng2 = 4, lat2 = 50)
-    })
-    
+        ),
+        fillColor = ~pal(vol),
+        weight = 1,
+        color = "black",
+        fillOpacity = 0.7,
+        highlightOptions = highlightOptions(
+          color = "red",
+          weight = 2,
+          bringToFront = TRUE
+        )) %>%
+      addLegend(
+        pal = pal,
+        values = seq(0, 6e+6, length.out = 5),
+        title = paste("Consumo total", input$año),
+        position = "topright"
+      )  %>%
+      fitBounds(lng1 = -10, lat1 = 27, lng2 = 4, lat2 = 50)
+  })
+  
   selected_region <- reactiveVal("Madrid, Comunidad de")
   
   observeEvent(input$spain_shape_click, {
