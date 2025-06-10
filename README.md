@@ -35,7 +35,7 @@ En el dashboard s'ha emprat **ChatGPT-4** com assistent a l'hora de generar l'es
 L'autor ha estat l'encarregat d'elaborar el contingut teòric de la pràctica, supervisar els suggeriments de la IAG, completar el codi d'acord als requeriments de la visualització i validar el resultat final.<br>
 
 **Així doncs, les IAGs han actuat en tot moment només com a assistents. La responsabilitat sobre el disseny, la presa de decisions i el bon funcionament de l'aplicació recau exclusivament sobre l'autor del recurs.<br>
-En cap cas el dashboard han estat generades de manera autònoma ni tampoc s'han emprat dades sensibles en la seva construcció.<br>
+En cap cas el dashboard ha estat generat de manera autònoma ni tampoc s'han emprat dades sensibles en la seva construcció.<br>
 Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia de citació de IA](https://openaccess.uoc.edu/bitstream/10609/148823/1/U2_17_GuiaCitarIA_CAT.pdf)), garantint transparència i integritat en el procés.**
 
 ## Execució
