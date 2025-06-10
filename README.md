@@ -1,4 +1,4 @@
-# Visualització de Dades - PRA2: hábitos alimentarios en España
+# Visualització de Dades - PRA2: [hábitos alimentarios en España](http://e26vc3-eric-farran.shinyapps.io/PRA2)
 
 **Màster Universitari en Ciència de Dades**
 *Universitat Oberta de Catalunya*
@@ -39,7 +39,7 @@ En cap cas les visualitzacions han estat generades de manera autònoma ni tampoc
 Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia de citació de IA](https://openaccess.uoc.edu/bitstream/10609/148823/1/U2_17_GuiaCitarIA_CAT.pdf)), garantint transparència i integritat en el procés.**
 
 ## Execució
-La visualització no està disponible en línia **degut a la gran quantitat de paquets i al volum de dades que es fa servir**. Per a consultar-la es pot visualitzar els documents de la carpeta screenshots o bé executar l'app en local aplicant els següents pasos:
+La visualització està [disponible en línia](http://e26vc3-eric-farran.shinyapps.io/PRA2), es pot visualitzar en els documents de la carpeta screenshots i també es pot executar en local aplicant els següents pasos:
 
 1. **Obre Rstudio i situat a la consola**
 2. **Clona el repositori GitHub**
