@@ -1,4 +1,4 @@
-# Visualització de Dades - PRA2: [hábitos alimentarios en España](http://127.0.0.1:3498/)
+# Visualització de Dades - PRA2: hábitos alimentarios en España
 
 **Màster Universitari en Ciència de Dades**
 *Universitat Oberta de Catalunya*
