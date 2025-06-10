@@ -1,0 +1,14 @@
+[phases.setup]
+nixPkgs = ["r", "R", "gcc", "zlib.dev", "libgit2", "openssl.dev"]
+
+[phases.install]
+commands = [
+  "R -e 'install.packages(c(\"shiny\", \"remotes\"), repos=\"https://packagemanager.posit.co/cran/latest\")'",
+  "R -e 'remotes::install_deps(dependencies=TRUE)'"
+]
+
+[phases.build]
+commands = []
+
+[start]
+command = "R -e 'shiny::runApp(port=${PORT}, host=\"0.0.0.0\")'"
