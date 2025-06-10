@@ -39,18 +39,8 @@ En cap cas les visualitzacions han estat generades de manera autònoma ni tampoc
 Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia de citació de IA](https://openaccess.uoc.edu/bitstream/10609/148823/1/U2_17_GuiaCitarIA_CAT.pdf)), garantint transparència i integritat en el procés.**
 
 ## Execució
-La visualització està [disponible en línia](http://e26vc3-eric-farran.shinyapps.io/PRA2), es pot visualitzar en els documents de la carpeta screenshots i també es pot executar en local aplicant els següents pasos:
 
-1. **Obre Rstudio i situat a la consola**
-2. **Clona el repositori GitHub**
-   <br>url <- "https://github.com/efarran0/Data_Visualization_PRA2/archive/main.zip"
-   <br>download.file(url, destfile = "repo.zip")
-   <br>unzip("repo.zip")
-
-4. **Prepara les llibreries requerides**
-   <br>source("Data_Visualization_PRA2-main/requirements.R")
-5. **Executa el runApp en R**
-   <br>shiny::runApp("Data_Visualization_PRA2-main/docs")
+La visualització està [disponible en línia](http://e26vc3-eric-farran.shinyapps.io/PRA2) però també es pot visualitzar dues instantànies i un gif en la carpeta screenshots.
 
 ## Llicència
 
