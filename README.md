@@ -40,7 +40,7 @@ Aquest ús està alineat amb les directrius de la UOC sobre IA generativa ([Guia
 
 ## Execució
 
-La visualització està [disponible en línia](http://e26vc3-eric-farran.shinyapps.io/PRA2) però també es pot visualitzar dues instantànies i un gif en la carpeta screenshots.
+La visualització està [disponible en línia](http://e26vc3-eric-farran.shinyapps.io/PRA2) però també es poden visualitzar dues instantànies i un gif en la carpeta screenshots.
 
 ## Llicència
 
