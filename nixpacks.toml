@@ -11,4 +11,4 @@ commands = [
 commands = []
 
 [start]
-command = "R -e 'shiny::runApp(port=${PORT}, host=\"0.0.0.0\")'"
+cmd = "R -e 'shiny::runApp(port=as.numeric(Sys.getenv(\"PORT\")), host=\"0.0.0.0\")'"
