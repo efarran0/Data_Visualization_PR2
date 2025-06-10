@@ -1,4 +1,4 @@
-# Visualització de Dades - PRA2: [hábitos alimentarios en España](http://e26vc3-eric-farran.shinyapps.io/PRA2)
+# Visualització de Dades - PRA2: [hábitos alimenticios en España](http://e26vc3-eric-farran.shinyapps.io/PRA2)
 
 **Màster Universitari en Ciència de Dades**
 *Universitat Oberta de Catalunya*
@@ -22,7 +22,7 @@ Aquesta aplicació forma part del lliurament de la pràctica 2 de l’assignatur
 - **Documents**:
   - Data original: [Ministerio de agricultura, pesca y alimentación (años 2014-2023, base censo INE 2011)](https://www.mapa.gob.es/es/alimentacion/temas/consumo-tendencias/panel-de-consumo-alimentario/series-anuales/default.aspx)
   - Data preprocessada: data.csv
-  - Script de preprocessament: hábitos_alimentarios_preprocesamiento.Rmd
+  - Script de preprocessament: hábitos_alimenticios_preprocesamiento.Rmd
     <br>Extracció de dades d'interès des de múltiples fitxers xlsx amb múltiples fulles.
   - Aplicació: app.R
 
