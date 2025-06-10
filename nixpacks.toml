@@ -2,20 +2,18 @@
 nixPkgs = [
   "R",
   "gcc",
-  "gfortran",
   "zlib.dev",
   "libgit2",
   "openssl.dev",
-  "gdal",     # per sf i mapSpain
-  "proj",     # per sf i mapSpain
-  "geos",     # per sf
-  "curl",     # algunes dependències com mapSpain o leaflet
-  "pkg-config",  # per compilar paquets amb dependències natives
-  "libxml2.dev"  # pot ser necessari per shiny o htmltools
+  "gdal",
+  "proj",
+  "geos",
+  "curl",
+  "pkg-config",
+  "libxml2.dev" 
 ]
 
 [phases.install]
-# Instal·lem tots els paquets d'R que fas servir
 commands = [
   "R -e 'install.packages(c(\"readr\", \"mapSpain\", \"shiny\", \"dplyr\", \"plotly\", \"leaflet\", \"htmltools\", \"shinythemes\", \"shinyWidgets\", \"shinyjs\", \"sf\"), repos=\"https://packagemanager.posit.co/cran/latest\")'"
 ]
@@ -24,4 +22,4 @@ commands = [
 commands = []
 
 [start]
-cmd = "R -e 'shiny::runApp(port=as.numeric(Sys.getenv(\"PORT\")), host=\"0.0.0.0\")'"
+cmd = "R -e 'shiny::runApp(port = as.numeric(Sys.getenv(\"PORT\")), host = \"0.0.0.0\")'"
