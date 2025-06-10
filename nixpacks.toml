@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["r", "R", "gcc", "zlib.dev", "libgit2", "openssl.dev"]
+nixPkgs = ["R", "gcc", "zlib.dev", "libgit2", "openssl.dev"]
 
 [phases.install]
 commands = [
